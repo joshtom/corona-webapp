@@ -4,7 +4,6 @@ import * as firebaseInit from 'firebase';
 import * as ROUTES from '../src/constants/routes';
 import { AuthProvider } from '../src/auth/Auth'
 import './App.css';
-
 import Header from './pages/Navigation';
 import Main from './pages/Main';
 // import Dashboard from './pages/Dashboard';
@@ -13,41 +12,29 @@ import Tips from './pages/Tips';
 import Report from './pages/Report';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCOMuidIz53S_1_iW5isfoiy3J66QVp720",
-//   authDomain: "dsc-covid-19.firebaseapp.com",
-//   databaseURL: "https://dsc-covid-19.firebaseio.com",
-//   projectId: "dsc-covid-19",
-//   storageBucket: "dsc-covid-19.appspot.com",
-//   messagingSenderId: "724650717987",
-//   appId: "1:724650717987:web:1e96e61a05f00140a35296",
-//   measurementId: "G-LJRVG3223S"
-// };
-
-// export const firebase = firebaseInit.initializeApp(firebaseConfig);
-// export const firestore = firebase.firestore();
-// export const storage = firebase.storage();
-// export const auth = firebase.auth();
+import { Provider } from "react-redux";
+import store from './stores/index';
 
 const App = () => (
-  <AuthProvider>
-  <Router>
-    <>
-      <Header />
-      <div className='container'>
-        <Route exact path={ROUTES.HOME} component={Main} />
-        {/* <Route path={ROUTES.DASHBOARD} component={Dashboard} /> */}
-        <Route exact path={ROUTES.TIPS} component={Tips} />
-        <Route exact path={ROUTES.REPORT} component={Report} />
-        <Route exact path={ROUTES.LOGIN} component={Login} />
-        <Route exact path={ROUTES.SIGNUP} component={Signup} />
-        <Route exact path={ROUTES.HEADER} component={Header} />
-        
-      </div>
-      <Footer />
-    </>
+  <Provider store = {store}>
+    <AuthProvider>
+      <Router>
+        <>
+          <Header />
+          <div className='container'>
+            <Route exact path={ROUTES.HOME} component={Main} />
+            <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+            <Route path={ROUTES.TIPS} component={Tips} />
+            <Route path={ROUTES.REPORT} component={Report} />
+            <Route path={ROUTES.LOGIN} component={Login} />
+            <Route path={ROUTES.SIGNUP} component={Signup} />
+            <Route path={ROUTES.HEADER} component={Header} />
+          </div>
+          <Footer />
+        </>
+      </Router>
   </Router>
   </AuthProvider>
+  </Provider>
 );
 export default App;
