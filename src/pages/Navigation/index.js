@@ -5,10 +5,13 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Logo from '../../icons/world.svg'
+import app from '../../base';
+import { useAuthContext } from '../../auth/Auth';
 import * as ROUTES from '../../constants/routes';
 import './styles.css';
 
 export default function Header() {
+  const { currentUser } = useAuthContext();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = event => {
@@ -45,7 +48,12 @@ export default function Header() {
       >
         <MenuItem style={Navmenu} onClick={handleClose}>MENU</MenuItem>
         <MenuItem onClick={handleClose}><Link to="/tips" style={NavColor}> Health Tips </Link></MenuItem>
-        <MenuItem onClick={handleClose} ><Link to="/login" style={NavColor}>Login</Link></MenuItem>
+        {
+          currentUser ? 
+          <MenuItem onClick={ () => app.auth().signOut() } ><Link to="#" style={NavColor}>Logout</Link></MenuItem>
+          :
+          <MenuItem onClick={handleClose} ><Link to="/login" style={NavColor}>Login</Link></MenuItem>
+        }
         </Menu>
           </p>
           <Link className='logo' aria-current='page' to='/'>
