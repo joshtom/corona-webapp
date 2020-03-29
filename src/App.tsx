@@ -4,7 +4,7 @@ import * as firebaseInit from 'firebase';
 import * as ROUTES from '../src/constants/routes';
 import { AuthProvider } from '../src/auth/Auth';
 import  PrivateRoute  from '../src/auth/PrivateRoute';
-import ScrollToTop from './components/scroll-restoration/ScrollToTop'
+import ScrollToTop from './components/scroll-restoration/scrollToTop'
 import './App.css';
 import Header from './pages/Navigation';
 import Main from './pages/Main';
