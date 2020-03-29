@@ -82,7 +82,6 @@ export function Login({ history }){
         > Sign in</Button> 
         <br />
         <br />
-        <p> Don't have an account yet? <Link to="/signup"> Sign Up </Link> </p>
         <AlertDialog 
         text="Forgot Password?"
         content={
@@ -98,6 +97,7 @@ export function Login({ history }){
         }
         handleClick={handleResetPassword}
         />
+        <p style={{ marginTop: '10px' }}> Don't have an account yet? <Link to="/signup"> Sign Up </Link> </p>
         </form>
         </div>
       </div>
