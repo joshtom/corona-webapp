@@ -1,13 +1,15 @@
 import React, { useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Input from '../../components/Input';
 import AlertDialog from '../../components/Dialog';
 import Button from '@material-ui/core/Button';
 import app from "../../base";
+import { useAuthContext } from '../../auth/Auth';
 import './styles.scss';
 
 
 export function Login({ history }){
+  const { currentUser } = useAuthContext()
   var [email, setEmail] = useState('');
   var [pass, setPass] = useState('');
   var [passwordChange, setPasswordChange] = useState('');
@@ -28,8 +30,6 @@ export function Login({ history }){
             } else {
               alert('Please Verify your email first');
             }
-            
-            
           })
         
         
@@ -51,6 +51,9 @@ export function Login({ history }){
         console.log(error.msg);
       });
 
+    }
+    if (currentUser) {
+      return <Redirect to="/report" />;
     }
     return (
       <div className="max-width">

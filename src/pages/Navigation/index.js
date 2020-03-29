@@ -67,9 +67,16 @@ export default function Header() {
                 </Link>
               </li> */}
               <li className='navbar-right-item'>
-                <Link activestyle={{ color: 'purple' }} to={ROUTES.SIGNUP}>
+                {
+                  currentUser ? 
+                  <Link activestyle={{ color: 'purple' }} onClick={ () => app.auth().signOut() }>
+                  Sign out
+                </Link> :
+                  <Link activestyle={{ color: 'purple' }} to={ROUTES.SIGNUP}>
                   Sign up
                 </Link>
+                }
+                
               </li>
               <li className='navbar-right-item'>
                 <Link activestyle={{ color: 'purple' }} to={ROUTES.TIPS}>

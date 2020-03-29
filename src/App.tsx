@@ -4,6 +4,7 @@ import * as firebaseInit from 'firebase';
 import * as ROUTES from '../src/constants/routes';
 import { AuthProvider } from '../src/auth/Auth';
 import  PrivateRoute  from '../src/auth/PrivateRoute';
+import ScrollToTop from './components/scroll-restoration/ScrollToTop'
 import './App.css';
 import Header from './pages/Navigation';
 import Main from './pages/Main';
@@ -19,7 +20,7 @@ const App = () => (
   <Provider store = {store}> 
     <AuthProvider>
       <Router>
-        
+          <ScrollToTop />
           <Header />
           <div className='container'>
             <Route exact path={ROUTES.HOME} component={Main} />
