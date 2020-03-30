@@ -1,10 +1,14 @@
+* {
+  font-family: 'Roboto Sans', sans-serif;
+}
 .desc {
   font-weight: 400;
-  line-height: 1em;
+  line-height: 1.4;
   text-align: center;
   font-size: 18px;
   padding: 0 20px;
   margin-top: 24px;
+  
 }
 
 .tips-header {
@@ -22,6 +26,22 @@
   height: auto;
 }
 
+.tips-content section p{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #C51162;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.tips-content img {
+  width: 95%;
+  margin-top: 20px;
+}
+
 .tip {
   padding: 16px;
   display: flex;
@@ -37,4 +57,10 @@
 }
 .tip > h4 {
   margin: 10px 0;
+}
+
+@media screen and (max-width: 700px) {
+  .tips-section {
+    margin-top: 126px;
+  }
 }

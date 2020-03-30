@@ -1,5 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
+import Prv1 from '../../images/prv1.jpg';
+import Prv2 from '../../images/prv2.jpg';
+import Prv3 from '../../images/prv3.jpg';
+import Prv4 from '../../images/prv4.jpg';
+import Prv5 from '../../images/prv5.jpg';
+import Prv6 from '../../images/prv6.jpg';
+import Prv7 from '../../images/prv7.jpg';
+import Prv8 from '../../images/prv8.jpg';
+import Prv9 from '../../images/prv9.jpg';
+
 
 const Tips = () => (
   <div className='max-width'>
@@ -11,7 +22,44 @@ const Tips = () => (
         should follow to keep yourself and others safe.
       </h3>
       <div className='tips-content'>
-        <div className='tip'>
+        
+            <section>
+              <p> 1 </p>
+              <a href={Prv1}> <img src={Prv1} alt="first prevention"/></a>
+            </section>
+            <section>
+              <p> 2 </p>
+              <a href={Prv2}> <img src={Prv2} alt="second prevention"/></a>
+              </section>
+            <section>
+              <p> 3 </p>
+              <a href={Prv3}> <img src={Prv3} alt="third prevention"/></a>
+              </section>
+            <section>
+              <p> 4 </p>
+              <a href={Prv4}> <img src={Prv4} alt="forth prevention"/></a>
+              </section>
+            <section>
+              <p> 5 </p>
+              <a href={Prv5}> <img src={Prv5} alt="fifth prevention"/></a>
+              </section>
+            <section>
+              <p> 6 </p>
+              <a href={Prv6}> <img src={Prv6} alt="sixth prevention"/></a>
+              </section>
+            <section>
+              <p> 7 </p>
+              <a href={Prv7}> <img src={Prv7} alt="seventh prevention"/></a>
+              </section>
+            <section>
+              <p> 8 </p>
+              <a href={Prv8}> <img src={Prv8} alt="eight prevention"/></a>
+              </section>
+            <section>
+              <p> 9 </p>
+              <a href={Prv9}> <img src={Prv9} alt="nine prevention"/></a>
+              </section>
+        {/* <div className='tip'>
           <h3 className='tip-header'>Wash your hands frequently</h3>
           <p>
             Regularly and thoroughly clean your hands with an alcohol-based hand
@@ -24,7 +72,7 @@ const Tips = () => (
             rub kills viruses that may be on your hands.
           </p>
         </div>
-        <div className='tip'>
+         <div className='tip'>
           <h3 className='tip-header'>Maintain social distancing</h3>
           <p>
             When someone coughs or sneezes they spray small liquid droplets from
@@ -83,8 +131,8 @@ const Tips = () => (
             health facility. This will also protect you and help prevent spread
             of viruses and other infections.
           </p>
-        </div>
-        <div className='tip'>
+        </div> 
+        <div className='tip'> 
           <h3 className='tip-header'>
             Stay informed and follow advice given by your healthcare provider.
           </h3>
@@ -101,7 +149,7 @@ const Tips = () => (
             best placed to advise on what people in your area should be doing to
             protect themselves.
           </p>
-        </div>
+        </div> */}
       </div>
     </section>
   </div>
