@@ -4,11 +4,10 @@ import './styles.css';
 const Tips = () => (
   <div className='max-width'>
     <section className='tips-section'>
-      <h1 className='tips-header'>Coronavirus Prevention Tips.</h1>
+      <h1 className='tips-header'>Coronavirus Survival Tips.</h1>
       <h3 className='desc'>
-        The best way to stop Coronavirus from growing is by reducing our
-        contacts with infected people. Below are some of the guidelines you
-        should follow to keep yourself and others safe.
+        Below are guidelines from W.H.O and CDC.govt on how to 
+        protect your self and your family from the pandemic.
       </h3>
       <div className='tips-content'>
         <div className='tip'>
