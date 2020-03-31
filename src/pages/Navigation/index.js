@@ -47,7 +47,7 @@ export default function Header() {
         
       >
         <MenuItem style={Navmenu} onClick={handleClose}>MENU</MenuItem>
-        <MenuItem onClick={handleClose}><Link to="/tips" style={NavColor}> Health Tips </Link></MenuItem>
+        <MenuItem onClick={handleClose}><Link to="/tips" style={NavColor}> Survival Tips </Link></MenuItem>
         {
           currentUser ? 
           <MenuItem onClick={ () => app.auth().signOut() } ><Link to="#" style={NavColor}>Logout</Link></MenuItem>
@@ -57,7 +57,7 @@ export default function Header() {
         </Menu>
           </p>
           <Link className='logo' aria-current='page' to='/'>
-           <img src={Logo} alt="Logo"/> COVID-19 Tracker
+           <img src={Logo} alt="Logo"/> Report COVID
           </Link>
           <nav className='navbar-right'>
             <ul className='navbar-right-content'>

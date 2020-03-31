@@ -2,8 +2,13 @@
   background-color: black;
   display: flex;
   color: white;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 70px;
   margin-top: 48px;
+  padding-top: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
 }
